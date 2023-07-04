@@ -1,0 +1,27 @@
+Bahan :
+- download etchdroid di playstore dan install
+- download file .iso dari situs resmi distro linux (kali-linux, ubuntu, debian)
+- usb otg
+- flashdisk minimal 8gb
+
+Buat Bootable :
+- pasang usb otg di hp dan colokan flashdisk
+- buka pengaturan --> hidupkan otg usb (sebagian hp no support)
+- buka apk etchdroid (beri semua izin aplikasi)
+- jika flashdisk sudah terdeteksi, cari file .iso linux nya
+- lakukan flash dan tunggu sambil ngopi hehe
+
+Install :
+- tancapkan flashdisk di komputer
+- hidupkan komputer dengan tombol power
+- tekan f2 untuk masuk menu bios (setiap laptop beda cara masuk bios)
+- click menu boot_manager
+- pilih usb yang terpasang, untuk boot ke usb
+- click install (gui=mode_interface) jika sudah muncul menu boot install linux nya
+- isi data sesuai selera
+- jika masuk menu partition, buat partisi untuk linux, atau gunakan partisi yang telah dibuat
+- partisi system / (root) minimal 25gb
+- partisi data user /home sesuai selera
+- partisi virtual ram /swap buat 2x ram (jika ram 2gb buat 4gb)
+- partisi /boot buat 100-200mb
+- lalu lanjutkan penginstalan dan selesai
