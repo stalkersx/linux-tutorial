@@ -1,0 +1,46 @@
+COSTUM MENU XFCE4 :
+[ ICONS APP ]
+- download nama_icon.png di google
+- rename nama_icon.png menjadi nama_icon.svg
+- pindahkan icon di /usr/share/icons/hicolor/scalable/apps
+- atau pindahkan icon di ~/.local/share/icons/hicolor/scalable/apps
+
+[ DIRECTORY APP ]
+- edit file /etc/xdg/menus/xfce-applications.menu
+- atau pindahkan dan edit file di ~/.config/menus/xfce-applications.menu
+- tambahkan code
+
+    <Menu>
+        <Name>judul</Name>
+        <Directory>nama_file.directory</Directory>
+        <Include>
+            <Category>nama_akses</Category>
+        </Include>
+    </Menu>
+
+- buat file diatas pada /usr/share/desktop-directories/nama_file.directory
+- atau buat di ~/.local/share/desktop-directories/nama_file.directory
+- tuliskan code dalam file
+
+    [Desktop Entry]
+    Version=1.0
+    Name=judul
+    Encoding=UTF-8
+    Icon=nama_logo
+    Type=Directory
+
+[ DESKTOP APP ]
+- buat file di /usr/share/applications/nama_file.desktop
+- atau buat di ~/.local/share/applications/nama_file.desktop
+- tuliskan code dalam file
+
+    [Desktop Entry]
+    Version=1.0
+    Type=Application
+    Name=judul_app
+    Comment=diskripsi
+    Exec=command_binary
+    Icon=nama_logo
+    Categories=nama_akses;
+    Terminal=false
+    StartupNotify=false
