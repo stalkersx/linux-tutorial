@@ -1,0 +1,12 @@
+temukan informasi module :
+- $ python
+  |__ open cli python
+
+>>> import nama_module
+  |__ masukan module
+
+>>> help(nama_module)
+  |__ informasi module
+
+>>> dir(nama_module)
+  |__ method dari module
