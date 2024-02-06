@@ -1,0 +1,16 @@
+HAPUS ARCHITECTURE TAMBAHAN (contoh amd64) :
+- $ sudo apt list --installed | grep amd64
+  |__ check list paket terinstall dengan architecture amd64
+  
+- $ sudo dpkg --force-help
+  |__ check command paksa hapus (jika tidak bisa hapus)
+  
+- $ sudo dpkg --purge --force-command-help package_name:architecture
+  $ sudo dpkg --purge --force-depends libc6:amd64
+  |__ hapus semua paket architecture yang terinstall
+  
+- $ dpkg --remove-architecture amd64
+  |__ hapus architecture tambahannya
+
+- $ sudo apt update && sudo apt full-upgrade
+  |__ lakukan pembaharuan
