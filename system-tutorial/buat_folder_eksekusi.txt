@@ -1,0 +1,24 @@
+######## MEMBUAT FOLDER EKSEKUSI SEMENTARA #########
+# contoh di $HOME/.local/.profile
+
+- $ touch ~/.profile
+- $ nano ~/.profile
+
+# tambahkan text dibawah ini
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+- $ mkdir ~/.local/bin
+- $ source ~/.profile
+
+# sekarang tinggal tambah file apa pun yang bisa dieksekusi ke ~/.local/bin
+
+######### MEMBUAT FOLDER EKSEKUSI SECARA PERMANEN ##########
+- # cp /etc/profile /etc/profile_old
+- # nano /etc/profile
+
+# tambah text di bawah ini
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi

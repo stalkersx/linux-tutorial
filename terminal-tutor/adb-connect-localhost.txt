@@ -1,6 +1,0 @@
-create connect to localhost :
-- $ su
-- $ stop adbd
-- $ iptables -N adbd
-- $ setprop service.adb.tcp.port 5554
-- $ start adbd

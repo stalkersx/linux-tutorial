@@ -1,0 +1,11 @@
+####### TERMINAL ANDROID ########
+- $ su
+- $ stop adbd
+- $ iptables -N adbd
+- $ setprop service.adb.tcp.port 5554
+- $ start adbd
+- $ ifconfig wlan0
+
+######## TERMINAL LINUX
+# hubungkan computer dan android lewat hostpot wifi
+- $ adb connect $(ifconfig wlan0 | grep inet | cut -d 't' -f 2 | cut -d 'n' -f 1)
