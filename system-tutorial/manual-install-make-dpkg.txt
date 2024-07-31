@@ -1,0 +1,21 @@
+##### CHECK CPU VERSION #########
+- $ lscpu
+- $ cat /proc/cpuinfo
+- $ uname -a
+- $ file /bin/bash
+
+##### INSTALL PROCESS #######
+- download software berdasarkan tipe cpu amd/arm 32/63 bit
+- ekstark hasil download
+- baca file readme.txt hasil ekstrak jika ada
+- ikutin intruksi penginstalan seperti lib dan configurenya
+
+# make #
+- # ./configure # jika ada
+  # ./configure --help
+- # ./make
+- # ./make install #pasang
+- # ./make uninstall #copot
+
+# dpkg #
+- # dpkg -i nama_file.deb
