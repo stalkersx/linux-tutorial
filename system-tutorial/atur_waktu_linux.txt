@@ -1,0 +1,6 @@
+######### ATUR MANUAL WAKTU DI LINUX #######
+- $ ls -la /etc/localtime
+- $ ls /usr/share/zoneinfo
+- # rm /etc/localtime
+- # ln -s /usr/share/zoneinfo/benua/wilayah /etc/localtime
+- $ date
