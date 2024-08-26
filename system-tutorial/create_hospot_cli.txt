@@ -1,0 +1,21 @@
+- $ sudo apt-get install hostapd
+
+- $ sudo nano /etc/hostapd/hostapd.conf
+### copy this ######
+interface=wlan0
+ssid=nama_wifi
+channel=1
+### add this if using password ####
+hw_mode=g
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=password_wifi
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+
+- $ sudo systemctl start hostapd
+atau
+- $ sudo hostapd -d /etc/hostapd/hostapd.conf

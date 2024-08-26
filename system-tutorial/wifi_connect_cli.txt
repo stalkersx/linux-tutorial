@@ -1,0 +1,59 @@
+#### menghubungkan wifi tanpa password ####
+- # systemctl stop NetworkManager
+  |__ matikan service network manager
+  
+- # ifconfig wlan0
+  |__ cek wifi aktif tidak
+  
+- # ifconfig wlan0 up
+  |__ aktifkan jika nirkabel wifi belum aktif
+  
+- # iwlist wlan0 scanning
+  # iw dev wlan0 scan
+  |__ pindai essid atau ssid wifi sekitar
+  
+- # iw dev wlan0 link
+  # iwconfig
+  |__ cek koneksi tidak ada yang aktif
+  
+- # iw dev wlan0 connect -w "ESSID_Name"
+  # iwconfig wlan0 essid "ESSID_Name"
+  |__ hubungkan ke essid atau ssid tanpa password
+  
+- # iw dev wlan0 connect -w "ESSID_Name" key s:your_password
+  # iwconfig wlan0 essid "ESSID_Name" key s:your_password
+  |__ hubungkan ke essid atau ssid dengan password wpa
+  
+- # echo -e "network={\n\tssid=\"ssid_name\"\n\tpsk=\"your_password\"\n}" | tee ~/wpa.conf
+  # wpa_supplicant -B -i wlan0 -c ~/wpa.conf -D wext
+  |__ hubungkan ke essid atau ssid dengan password wpa2
+  
+- # iw dev wlan0 link
+  |__ cek koneksi terhubung tidak
+  
+- # ifconfig wlan0
+  |__ cek apa sudah ada ip address
+  
+- # ip route show
+  |__ cek jalur koneksi sudah disetel atau belum
+  
+- # dhclient wlan0
+  |__ setel ip dan jalur koneksi
+  
+- # ifconfig wlan0
+  # ip route show
+  |__ cek kembali ip dan jalur koneksi
+  
+- # ping 8.8.8.8
+  |__ test koneksi internet terhubung menggunakan dns google
+  
+#### memutuskan sambungan wifi #####
+- # pkill wpa_supplicant
+  |__ putuskan sambungan ke wifi dengan password
+  
+- # iw dev wlan0 disconnect
+  |__ putuskan sambungan ke wifi tanpa password
+  
+- # ip addr delete $(ifconfig wlan0 | grep inet | awk '{print $2}' | head -n 1) dev wlan0
+  # dhclient -r
+  |__ hapus ip dan jalur dari wifi
