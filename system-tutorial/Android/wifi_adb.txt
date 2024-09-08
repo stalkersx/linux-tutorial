@@ -1,0 +1,11 @@
+- $ adb shell cmd -w wifi set-wifi-enabled enable|disable
+  #### nyalakan atau matikan wifi
+- $ adb shell cmd -w wifi start-scan
+  $ adb shell cmd -w wifi list-scan-results
+  ## scan wifi sekitar ###
+- $ adb shell -w wifi connect-networks [nama_wifi/ssid] wpa2 [your_passwd]
+  ### hubungkan wifi ###
+- $ adb shell -w wifi status
+  ## cek wifi terhubung tidaknya ###
+- $ adb shell cmd -w wifi list-networks
+  ## cek wifi yang pernah terhubung

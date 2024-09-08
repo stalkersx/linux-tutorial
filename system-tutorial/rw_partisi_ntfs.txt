@@ -1,0 +1,4 @@
+# rw ntfs partisi dual boot window
+- # umount /dev/sdaxxx
+- # ntfsfix /dev/sdaxxx
+- # mount -o rw -t ntfs-3g /dev/sdaxxx /media/your_folder
